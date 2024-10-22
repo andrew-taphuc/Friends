@@ -133,3 +133,22 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* CSS to hide audio controls */
+audio::-webkit-media-controls-panel,
+audio::-webkit-media-controls-enclosure,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+audio {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+}
