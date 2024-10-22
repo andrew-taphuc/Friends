@@ -2,20 +2,55 @@
 
 body {
     background-color: #2A2B3A;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    padding: 1rem; /* Reduced padding for mobile */
+    padding: 2rem;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    padding-top: 3rem;  /* Added more top padding */
+    box-sizing: border-box;
 }
 
+/* Audio styles */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px 0; /* Reduced the space above and below */
+}
+
+.play-button {
+    padding: 10px; /* Reduced padding */
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background: none;
+    border: 2px solid #FFDAB9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #FFDAB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 218, 185, 0.1);  /* Slight background on hover */
+}
+
+/* Slider styles */
 .slider-wrapper {
     position: relative;
     width: 100%;
     max-width: 48rem;
     margin: 0 auto;
+    margin-top: 3rem;  /* Added space above slider */
 }
 
 .slider {
@@ -66,75 +101,31 @@ body {
     opacity: 1;
 }
 
-/* Tablet devices */
-@media screen and (min-width: 768px) {
-    .container {
-        padding: 1.5rem;
-    }
-    
-    .slider img {
-        max-height: 400px;
-    }
-}
-
-/* Desktop devices */
-@media screen and (min-width: 1024px) {
-    .container {
-        padding: 2rem;
-    }
-    
-    .slider img {
-        max-height: 500px;
-    }
-    
-    .slider-wrapper {
-        max-width: 48rem;
-    }
-}
-
-/* Large desktop screens */
-@media screen and (min-width: 1440px) {
-    .slider img {
-        max-height: 600px;
-    }
-}
-
+/* Elegant text styles */
 .elegant-text {
-    /* Positioning and sizing */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px;  /* Adjust as needed */
-    width: 80%;        /* Adjust as needed */
-    margin: 0 auto;    /* Center the div itself */
+    min-height: 100px;
+    width: 80%;
+    margin: 2rem auto;  /* Added more margin */
     padding: 2rem;
 
     /* Text styling */
     color: #FFDAB9;
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;  /* Elegant fonts */
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.5px;
 
     /* Optional background and effects */
-    background-color: transparent;  /* Dark background to contrast white text */
+    background-color: transparent;
     border-radius: 8px;
+    text-align: center;  /* Ensure text is centered */
 }
 
-/* For better font loading, add font import at top of CSS file */
-
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .elegant-text {
-        width: 90%;
-        padding: 1.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-/* CSS to hide audio controls */
+/* Audio element styles */
 audio::-webkit-media-controls-panel,
 audio::-webkit-media-controls-enclosure,
 audio::-webkit-media-controls-timeline,
@@ -151,4 +142,69 @@ audio {
     opacity: 0;
     z-index: -1;
     pointer-events: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        padding-top: 2rem;
+    }
+    
+    .slider-wrapper {
+        margin-top: 2rem;
+    }
+    
+    .audio-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .elegant-text {
+        width: 90%;
+        padding: 1.5rem;
+        font-size: 1.1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .slider img {
+        max-height: 400px;
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 2rem;
+        padding-top: 4rem;
+    }
+    
+    .slider-wrapper {
+        max-width: 48rem;
+        margin-top: 4rem;
+    }
+    
+    .audio-container {
+        margin-bottom: 2.5rem;
+    }
+    
+    .slider img {
+        max-height: 500px;
+    }
+}
+
+/* Large desktop screens */
+@media screen and (min-width: 1440px) {
+    .slider img {
+        max-height: 600px;
+    }
+    
+    .elegant-text {
+        font-size: 1.4rem;
+    }
 }

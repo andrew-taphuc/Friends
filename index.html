@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends_Slideshow</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Dành cho em bé</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="background-audio" autoplay loop style="display:none">
-            <source src="cat.mp3" type="audio/mpeg">
-        </audio>
-    <section class="container">
         <div class="slider-wrapper">
             <div class="slider">
-                <img id="slide-1" src="./pic1.png" />
-                <img id="slide-1" src="./pic2.png" />
-                <img id="slide-1" src="./pic3.png" />
-                <img id="slide-1" src="./pic4.png" />
-                <img id="slide-1" src="./pic5.png" />
-                <img id="slide-1" src="./pic6.png" />
-                <img id="slide-1" src="./pic7.png" />
-                <img id="slide-1" src="./pic8.png" />
-                <img id="slide-1" src="./pic9.png" />
-                <img id="slide-1" src="./pic10.png" />
-                <img id="slide-1" src="./pic11.png" />
-                <img id="slide-1" src="./pic12.png" />
+                <img src="./pic1.png" id="slide-1" alt="slide 1">
+                <img src="./pic2.png" id="slide-2" alt="slide 2">
+                <img src="./pic3.png" id="slide-3" alt="slide 3">
+                <img src="./pic4.png" id="slide-4" alt="slide 4">
+                <img src="./pic5.png" id="slide-5" alt="slide 5">
+                <img src="./pic6.png" id="slide-6" alt="slide 6">
+                <img src="./pic7.png" id="slide-7" alt="slide 7">
+                <img src="./pic8.png" id="slide-8" alt="slide 8">
+                <img src="./pic9.png" id="slide-9" alt="slide 9">
+                <img src="./pic10.png" id="slide-10" alt="slide 10">
+                <img src="./pic11.png" id="slide-11" alt="slide 11">
+                <img src="./pic12.png" id="slide-12" alt="slide 12">
             </div>
+
             <div class="slider-nav">
                 <a href="#slide-1"></a>
                 <a href="#slide-2"></a>
@@ -41,10 +43,21 @@
                 <a href="#slide-12"></a>
             </div>
         </div>
+        <div class="section container">
+            <div class="audio-container">
+                <button id="playButton" class="play-button">
+                    <i class="fas fa-play"></i>
+                </button>
+                <audio id="background-audio" loop style="display:none">
+                    <source src="cat.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         <div class="elegant-text">
-            Em xoay ngang ra xem cho dễ nhé!
+            Em xoay ngang iPad và ấn nút play trước khi xem nhé!
         </div>
-    </section>
+    </div>
+
+    <!-- Your JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
