@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
 body {
-    background-color: #f8fafc;
+    background-color: #2A2B3A;
 }
 
 .container {
@@ -94,5 +96,40 @@ body {
 @media screen and (min-width: 1440px) {
     .slider img {
         max-height: 600px;
+    }
+}
+
+.elegant-text {
+    /* Positioning and sizing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;  /* Adjust as needed */
+    width: 80%;        /* Adjust as needed */
+    margin: 0 auto;    /* Center the div itself */
+    padding: 2rem;
+
+    /* Text styling */
+    color: #FFDAB9;
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;  /* Elegant fonts */
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+
+    /* Optional background and effects */
+    background-color: transparent;  /* Dark background to contrast white text */
+    border-radius: 8px;
+}
+
+/* For better font loading, add font import at top of CSS file */
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .elegant-text {
+        width: 90%;
+        padding: 1.5rem;
+        font-size: 1.1rem;
     }
 }
